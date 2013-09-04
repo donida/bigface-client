@@ -19,5 +19,8 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<bean id="restEventSender" class="bigface.service.RestEventSender">
 		<property name="restTemplate" ref="restTemplate" />
 	</bean>
+	
+	<bean id="faceRecognation" class="bigface.service.FaceRecognation"/>
+	
 
 </beans>

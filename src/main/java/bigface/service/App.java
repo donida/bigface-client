@@ -9,9 +9,14 @@ public class App {
 	public static void main(String[] args) {
 		ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 		RestEventSender restEventSender = (RestEventSender) ctx.getBean("restEventSender");
+		FaceRecognation faceRecognation = (FaceRecognation) ctx.getBean("faceRecognation");
 		while (true) {
 			try {
-				restEventSender.sendEvent();
+				int faceCount = faceRecognation.getFaceCount();
+				if (faceCount <= 0)
+					continue;
+				for (int i = 0; i < faceCount; i++)
+					restEventSender.sendEvent();
 				try {
 					Thread.sleep(100);
 				} catch (InterruptedException e) {

@@ -55,5 +55,36 @@
 			<version>1.9.13</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.googlecode.javacv</groupId>
+			<artifactId>javacv</artifactId>
+			<version>0.5</version>
+		</dependency>
+
+		<!-- For Linux x64 environments -->
+		<dependency>
+			<groupId>com.googlecode.javacv</groupId>
+			<artifactId>javacv</artifactId>
+			<classifier>linux-x86_64</classifier>
+			<version>0.5</version>
+		</dependency>
+
+		<!-- For OSX environments -->
+		<dependency>
+			<groupId>com.googlecode.javacv</groupId>
+			<artifactId>javacv</artifactId>
+			<classifier>macosx-x86_64</classifier>
+			<version>0.5</version>
+		</dependency>
+
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>javacv</id>
+			<name>JavaCV</name>
+			<url>http://maven2.javacv.googlecode.com/git/</url>
+		</repository>
+	</repositories>
+
 </project>
