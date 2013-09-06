@@ -10,6 +10,7 @@ public class App {
 		ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 		RestEventSender restEventSender = (RestEventSender) ctx.getBean("restEventSender");
 		FaceRecognation faceRecognation = (FaceRecognation) ctx.getBean("faceRecognation");
+//		faceRecognation.grabImageFile("/home/donida", "rafael2.jpg");
 		while (true) {
 			try {
 				int faceCount = faceRecognation.getFaceCount();
